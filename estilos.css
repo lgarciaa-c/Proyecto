@@ -1,0 +1,504 @@
+
+/* Paleta sencilla: blanco, negro, gris y un solo color de acento (naranja) */
+body{
+margin:0
+}
+button,input,select,textarea{
+font-family:inherit
+}
+:root {
+    --blanco: #ffffff;
+    --negro: #111111;
+    --gris: #f4f4f4;
+    --borde: #dddddd;
+    --texto: #444444;
+    --acento: #D9480F;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    color: var(--negro);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: .4rem;
+    background: var(--acento);
+    margin: 1rem auto 0;
+}
+
+a {
+    color: var(--acento);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    background: var(--acento);
+    color: var(--blanco);
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    border: .2rem solid var(--acento);
+    border-radius: .6rem;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.boton:hover {
+    background: var(--negro);
+    border-color: var(--negro);
+}
+
+.boton.claro {
+    background: transparent;
+    color: var(--blanco);
+    border-color: var(--blanco);
+}
+
+.boton.claro:hover {
+    background: var(--blanco);
+    color: var(--negro);
+}
+
+.tarjeta .boton.claro,
+.formulario .boton.claro,
+main .boton.claro {
+    color: var(--negro);
+    border-color: var(--negro);
+}
+
+.tarjeta .boton.claro:hover,
+.formulario .boton.claro:hover,
+main .boton.claro:hover {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+.hero .boton.claro {
+    color: var(--blanco);
+    border-color: var(--blanco);
+}
+
+.hero .boton.claro:hover {
+    background: var(--blanco);
+    color: var(--negro);
+}
+
+/* Navegación */
+.nav-bg {
+    background: var(--negro);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--blanco);
+    text-decoration: none;
+    letter-spacing: .1rem;
+}
+
+.enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.enlaces a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: .8rem 1.4rem;
+    border-radius: .4rem;
+}
+
+.enlaces a:hover,
+.enlaces a.activo {
+    color: var(--acento);
+}
+
+.enlaces a.compra {
+    background: var(--acento);
+    color: var(--blanco);
+}
+
+.enlaces a.compra:hover {
+    background: var(--blanco);
+    color: var(--negro);
+}
+
+/* Hero y cabeceras */
+.hero {
+    background: linear-gradient(135deg, #111111 60%, #2b2b2b);
+    color: var(--blanco);
+    padding: 8rem 0;
+    border-bottom: .6rem solid var(--acento);
+}
+
+.hero h1 {
+    color: var(--blanco);
+    font-size: 4.4rem;
+}
+
+.hero p {
+    font-size: 1.9rem;
+    max-width: 55rem;
+    color: #dddddd;
+}
+
+.etiqueta {
+    color: var(--acento);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.4rem;
+}
+
+.cabecera {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 4rem 0;
+    border-bottom: .6rem solid var(--acento);
+}
+
+.cabecera h1 {
+    color: var(--blanco);
+}
+
+.cabecera p {
+    margin: 0;
+    color: #dddddd;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 50rem;
+    margin-top: 2.5rem;
+}
+
+/* Tarjetas y grid */
+.tarjeta {
+    background: var(--blanco);
+    border: .1rem solid var(--borde);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, .08);
+    margin-bottom: 2.5rem;
+}
+
+.tarjeta p {
+    margin-top: 0;
+}
+
+.centro {
+    text-align: center;
+}
+
+.dato {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--acento);
+    line-height: 1.2;
+}
+
+.foto {
+    height: 18rem;
+    border-radius: .8rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #cfcfcf, #9a9a9a);
+}
+
+.genero {
+    display: inline-block;
+    background: var(--negro);
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: .2rem 1.2rem;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+}
+
+.seccion-gris {
+    background: var(--gris);
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2.5rem;
+    }
+
+    .grid.dos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .boton {
+        width: auto;
+    }
+
+    .botones {
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .hero h1 {
+        font-size: 7rem;
+    }
+}
+
+/* Filtros y tabla */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: var(--gris);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.filtros label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--negro);
+}
+
+.filtros div {
+    flex: 1 1 20rem;
+}
+
+select,
+.input-text {
+    width: 100%;
+    border: .1rem solid #bbbbbb;
+    background: var(--blanco);
+    padding: 1.1rem;
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+
+select:focus,
+.input-text:focus {
+    outline: .2rem solid var(--acento);
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    border: .1rem solid var(--borde);
+    border-radius: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 60rem;
+}
+
+th {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 1.2rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+td {
+    padding: 1.2rem;
+    border-bottom: .1rem solid var(--borde);
+}
+
+tr:nth-child(even) td {
+    background: var(--gris);
+}
+
+tr:hover td {
+    background: #ffe8dc;
+}
+
+/* Formulario */
+.formulario {
+    background: var(--blanco);
+    border: .1rem solid var(--borde);
+    width: min(80rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, .08);
+}
+
+.formulario fieldset {
+    border: .1rem solid var(--borde);
+    border-radius: .8rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+.formulario legend {
+    color: var(--acento);
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    color: var(--negro);
+    margin-bottom: .5rem;
+}
+
+.ayuda {
+    font-size: 1.3rem;
+    color: #777;
+}
+
+textarea.input-text {
+    height: 12rem;
+}
+
+.opcion {
+    display: block;
+    padding: .5rem 0;
+}
+
+@media (min-width: 768px) {
+    .dos-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+/* Pagos */
+.precio {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--negro);
+    line-height: 1;
+}
+
+.tarjeta ul {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.tarjeta img {
+    display: block;
+    margin: 1.5rem auto;
+    border: .1rem solid var(--borde);
+    border-radius: .8rem;
+}
+
+.confirmacion {
+    display: none;
+    background: #e7f5ec;
+    color: #14532d;
+    border: .1rem solid #86d3a3;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.confirmacion:target {
+    display: block;
+}
+
+.confirmacion h3 {
+    color: #14532d;
+}
+
+footer {
+    background: var(--negro);
+    color: #cccccc;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+footer p {
+    margin: .3rem 0;
+}

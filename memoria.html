@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria | Laguna Sound Fest 2027</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="nav-bg">
+        <nav class="navegacion">
+            <a class="logo" href="index.html">Laguna Sound Fest</a>
+            <div class="enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="programa.html">Programa</a>
+                <a href="artistas.html">Artistas</a>
+                <a href="memoria.html" class="activo">Memoria</a>
+                <a href="registro.html">Registro</a>
+                <a class="compra" href="pagos.html">Boletos</a>
+            </div>
+        </nav>
+    </header>
+    <div class="cabecera"><div class="contenedor"><h1>Memoria</h1><p>Archivo de ediciones anteriores</p></div></div>
+    <main class="contenedor">
+        <section>
+            <form class="filtros" action="#">
+                <div><label for="edicion">Edición</label>
+                    <select id="edicion" name="edicion"><option value="">Todas</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
+                <div><label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria"><option value="">Todas</option><option value="carteles">Carteles</option><option value="programas">Programas</option><option value="resenas">Reseñas</option></select></div>
+            </form>
+            <div class="grid">
+                <div class="tarjeta" data-edicion="2026" data-categoria="carteles"><span class="genero">Carteles</span><h3>Cartel oficial 2026</h3><p>Autor: Ana Ruiz<br>Año: 2026</p><a class="boton" href="#">Ver PDF</a></div>
+                <div class="tarjeta" data-edicion="2025" data-categoria="programas"><span class="genero">Programas</span><h3>Programa general 2025</h3><p>Autor: Comité organizador<br>Año: 2025</p><a class="boton" href="#">Ver PDF</a></div>
+                <div class="tarjeta" data-edicion="2024" data-categoria="resenas"><span class="genero">Reseñas</span><h3>Reseña de la primera edición</h3><p>Autor: Carlos Medina<br>Año: 2024</p><a class="boton" href="#">Ver PDF</a></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Laguna Sound Fest 2027 · 12, 13 y 14 de marzo · Foro Laguna</p>
+        
+    </footer>
+</body>
+</html>

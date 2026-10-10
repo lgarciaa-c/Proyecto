@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa | Laguna Sound Fest 2027</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="nav-bg">
+        <nav class="navegacion">
+            <a class="logo" href="index.html">Laguna Sound Fest</a>
+            <div class="enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="programa.html" class="activo">Programa</a>
+                <a href="artistas.html">Artistas</a>
+                <a href="memoria.html">Memoria</a>
+                <a href="registro.html">Registro</a>
+                <a class="compra" href="pagos.html">Boletos</a>
+            </div>
+        </nav>
+    </header>
+    <div class="cabecera"><div class="contenedor"><h1>Programa</h1><p>Cartel por día y hora</p></div></div>
+    <main class="contenedor">
+        <section>
+            <form class="filtros" action="#">
+                <div><label for="dia">Día</label>
+                    <select id="dia" name="dia"><option value="">Todos</option><option value="12">Viernes 12</option><option value="13">Sábado 13</option><option value="14">Domingo 14</option></select></div>
+                <div><label for="tipo">Género</label>
+                    <select id="tipo" name="tipo"><option value="">Todos</option><option value="regional">Regional mexicano</option><option value="sierreno">Sierreño</option><option value="electronica">Electrónica</option><option value="trap">Trap</option><option value="corridos">Corridos tumbados</option><option value="regueton">Reguetón</option><option value="regueton-mexa">Reguetón mexa</option></select></div>
+                <div><label for="sala">Escenario</label>
+                    <select id="sala" name="sala"><option value="">Todos</option><option value="sol">Escenario Sol</option><option value="luna">Escenario Luna</option></select></div>
+            </form>
+            <div class="tabla-scroll">
+                <table>
+                    <thead><tr><th>Día</th><th>Hora</th><th>Artista</th><th>Género</th><th>Escenario</th></tr></thead>
+                    <tbody>
+                        <tr data-dia="12" data-tipo="regional" data-sala="sol"><td>Vie 12</td><td>5:00 pm</td><td>José Torres</td><td>Regional mexicano</td><td>Sol</td></tr>
+                        <tr data-dia="12" data-tipo="sierreno" data-sala="luna"><td>Vie 12</td><td>7:30 pm</td><td>Yahritza y su Esencia</td><td>Sierreño</td><td>Luna</td></tr>
+                        <tr data-dia="12" data-tipo="electronica" data-sala="sol"><td>Vie 12</td><td>10:00 pm</td><td>DJ Valkyria</td><td>Electrónica</td><td>Sol</td></tr>
+                        <tr data-dia="13" data-tipo="trap" data-sala="luna"><td>Sáb 13</td><td>5:00 pm</td><td>Duki</td><td>Trap</td><td>Luna</td></tr>
+                        <tr data-dia="13" data-tipo="corridos" data-sala="sol"><td>Sáb 13</td><td>8:00 pm</td><td>Natanael Cano</td><td>Corridos tumbados</td><td>Sol</td></tr>
+                        <tr data-dia="13" data-tipo="regueton" data-sala="sol"><td>Sáb 13</td><td>10:30 pm</td><td>Omar Courtz</td><td>Reguetón</td><td>Sol</td></tr>
+                        <tr data-dia="14" data-tipo="regueton-mexa" data-sala="luna"><td>Dom 14</td><td>4:30 pm</td><td>Dani Flow</td><td>Reguetón mexa</td><td>Luna</td></tr>
+                        <tr data-dia="14" data-tipo="electronica" data-sala="sol"><td>Dom 14</td><td>8:30 pm</td><td>Pulso 360</td><td>Electrónica</td><td>Sol</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="ayuda">.....</p>
+        </section>
+    </main>
+    <footer>
+        <p>Laguna Sound Fest 2027 · 12, 13 y 14 de marzo · Foro Laguna</p>
+    </footer>
+</body>
+</html>
